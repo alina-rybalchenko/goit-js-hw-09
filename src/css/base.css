@@ -70,88 +70,77 @@ main:has(.back-link) {
 }
 
 .feedback-form {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-  max-width: 1128px;
-  margin: 0 auto;
 }
 
-.input-label {
-  display: flex;
-  flex-direction: column;
+.feedback-form label {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #2e2f42;
+  text-align: left;
 }
 
-.form-input {
+.feedback-form input,
+.feedback-form textarea {
+  display: block;
   width: 100%;
   max-width: 360px;
-  padding: 8px;
-  font-family: inherit;
-  font-size: 16px;
+  margin-top: 8px;
+  padding-left: 8px;
+  font: inherit;
   border: 1px solid #808080;
-  border-radius: 0;
-  outline: none;
+  border-radius: 4px;
+  outline: 0;
   transition: border-color 0.15s ease-in-out;
 }
 
-.form-input:focus,
-.form-input:hover {
-  border-color: #000;
+.feedback-form input:focus,
+.feedback-form textarea:focus,
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border: 1px solid #000;
 }
 
-.email {
+.feedback-form input:active,
+.feedback-form textarea:active {
+  border: 1px solid #808080;
+}
+
+.feedback-form input[type='email'] {
   height: 40px;
 }
 
-.message {
+.feedback-form textarea {
   height: 200px;
   resize: none;
 }
 
-.button-submit {
-  width: 86px;
-  height: 40px;
-  background-color: #4e75ff;
-  color: #fff;
+.feedback-form button {
+  margin-top: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background-color: #4e75ff;
   transition: background-color 0.2s ease-in-out;
-  align-self: flex-start;
+  cursor: pointer;
 }
 
-.button-submit:hover,
-.button-submit:focus {
+.feedback-form button:hover,
+.feedback-form button:focus {
   background-color: #6c8cff;
-}
-
-/* Адаптивність під твої медіа-правила */
-@media (max-width: 375px) {
-  .form-input {
-    max-width: 100%;
-  }
-  .button-submit {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .feedback-form {
-    gap: 16px;
-  }
-}
-@media (min-width: 1200px) {
-  .feedback-form {
-    max-width: 1128px;
-  }
 }
