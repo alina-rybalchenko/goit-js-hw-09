@@ -68,3 +68,90 @@ main:has(.back-link) {
 .gallery-item:hover::after {
   background: rgba(78, 117, 255, 0.4);
 }
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 360px;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 1px solid #808080;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.form-input:focus,
+.form-input:hover {
+  border-color: #000;
+}
+
+.email {
+  height: 40px;
+}
+
+.message {
+  height: 200px;
+  resize: none;
+}
+
+.button-submit {
+  width: 86px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  align-self: flex-start;
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  background-color: #6c8cff;
+}
+
+/* Адаптивність під твої медіа-правила */
+@media (max-width: 375px) {
+  .form-input {
+    max-width: 100%;
+  }
+  .button-submit {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .feedback-form {
+    gap: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .feedback-form {
+    max-width: 1128px;
+  }
+}
